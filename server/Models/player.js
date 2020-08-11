@@ -21,4 +21,4 @@ const playerSchema = new Schema({
     }
 });
 
-module.exports = Player = mongoose.model("player", playerSchemnamea);
+module.exports = Player = mongoose.model("player", playerSchema);

@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
     try {
 
         if(!req.headers.authorization) {
-            //res.status(400).json(BadAuth: "Table Not Allowed To U");
+            res.status(400).json({ badAuth: "Table Not Allowed To U" });
             throw "Forbidde";
         }
 

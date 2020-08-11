@@ -20,10 +20,11 @@ exports.createTable = async(req, res, next) => {
     }
 
     const gameTable = new Table({ name });
-
+    console.log(name);
     await gameTable.save({
 
         message: "Chatroom " + name + " Created 🤴🏾"
-    })
+    });
+    res.json({ message: "Game Table: " + name + " Created 🤴🏾" })
 
 }
