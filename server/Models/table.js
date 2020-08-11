@@ -2,10 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const tableSchema = new Schema({
-  : {
-    type: ,
-    required: true
-  } 
+
+
+    name: {
+        type: String,
+        required: true
+    },
+    id: {
+        type: String,
+        required: true
+    }
+
 });
 
-module.exports =  = mongoose.model("", tableSchema);
+module.exports = Table = mongoose.model("table", tableSchema);

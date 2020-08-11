@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ZiXyos/BlackJacku#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "nodemon": "^2.0.4"
   },
   "devDependencies": {}

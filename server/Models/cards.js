@@ -1,18 +1,22 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const cardSchema = new Schema({
+const cardsSchema = new Schema({
 
-
-    name: {
+    value: {
+        type: Number,
+        required: true
+    },
+    sign: {
         type: String,
         required: true
     },
-    id: {
+    colors: {
         type: String,
         required: true
-    }
-
+    },
 });
 
-module.exports = Card = mongoose.Schema("table", tableSchema);
+
+
+module.exports = Card = mongoose.Schema("card", tableSchema);
