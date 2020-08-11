@@ -3,6 +3,9 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
 
+const user = require("./Routes/Api/user");
+const createTable = require("./Routes/Api/createTable");
+
 // Bodyparser middleware
 app.use(
     bodyParser.urlencoded({
@@ -19,7 +22,8 @@ mongoose.connect( db, { useNewUrlParser: true, useUnifiedTopology: true } )
     .then(() => console.log("MongoDB successfully connected 🧉"))
     .catch(err => console.log(err));
 
-app.use("/user", require("./Routes/Api/user"));
+app.use("/user", user);
+app.use("/table", createTable);
 
 const port = process.env.PORT || 5000;
 
