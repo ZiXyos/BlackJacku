@@ -1,13 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const UserSchema = new Schema({
 
     name: {
-        type: String,
-        required: true
-      },
-    pseudo: {
         type: String,
         required: true
     },
@@ -21,13 +17,7 @@ const userSchema = new Schema({
     },
     age: {
         type: Number,
-         min: 18, max: 65
-    },
-    id: {
-        type: Number,
-        default: () => {
-            return '_' + Math.random().toString(36).substr(2, 9)
-        }
+        min: 18, max: 65
     },
     date: {
         type: Date,
@@ -35,4 +25,4 @@ const userSchema = new Schema({
     }
 });
 
-module.exports = User = mongoose.Schema("user", userSchema);
+module.exports = User = mongoose.model("users", UserSchema);
