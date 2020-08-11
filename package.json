@@ -1,0 +1,25 @@
+{
+  "name": "blacku-jacku",
+  "version": "1.0.0",
+  "description": "Bonjour à toi cher joueur et bienvenue dans <BlackJacku> le meilleur jeu de Blackjack de tous les temps.",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZiXyos/BlackJacku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZiXyos/BlackJacku/issues"
+  },
+  "homepage": "https://github.com/ZiXyos/BlackJacku#readme",
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {}
+}
