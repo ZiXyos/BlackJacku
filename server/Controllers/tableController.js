@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Table = require("../Models/table.js");
+const table = require("../Models/table.js");
 
 exports.createTable = async(req, res, next) => {
 
@@ -27,4 +28,21 @@ exports.createTable = async(req, res, next) => {
     });
     res.json({ message: "Game Table: " + name + " Created 🤴🏾" })
 
+}
+
+exports.joinTable = async(req, res, next) => {
+
+    const { name, id } = req.body;
+
+    const gameTableExist = await Table.findOne( { name });
+
+    if(gameTableExist) {
+
+        res.json({ tableName: name + " joined"});
+        console.log("u join da table xD");
+    } else {
+
+        res.status(401).json({ badInput: "Table Doesn;t Exist pls entry a good name" });
+        console.log("bad name or Id");
+    }
 }
