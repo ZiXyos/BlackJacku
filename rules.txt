@@ -1,0 +1,41 @@
+# BlackJacku
+
+Bonjour à toi cher joueur et bienvenue dans <BlackJacku> le meilleur jeu de Blackjack de tous les temps !
+
+Voici les règles du jeu au cas où tu ne les connaitrais pas :
+
+La partie oppose simultanément chaque joueur contre la banque. Le but est de battre le croupier sans dépasser 21. Dès qu'un joueur fait plus que 21, on dit qu'il « Brûle » ou qu'il « Crève » et il perd sa mise initiale. La valeur des cartes est établie comme suit :
+
+- De  2 à 9 → valeur nominale de la carte.
+
+- Chaque figure + le 10 surnommées "bûche" → 10 points.
+
+- L'As → 1 ou 11 (au choix).
+
+
+Au début de la partie, le croupier distribue une carte face visible à chaque joueur et tire une carte face visible également pour lui. Il tire ensuite pour chacun une seconde carte face visible et tire une seconde carte face cachée pour lui au Blackjack américain. Dans le blackjack européen, le croupier tire sa seconde carte après le tour de jeu des joueurs.
+
+Puis, il demande au premier joueur de la table (joueur situé à sa gauche) l'option qu'il désire choisir.
+Si le joueur veut une carte, il doit l'annoncer en disant « Carte ». Le joueur peut demander autant de cartes qu'il le souhaite pour approcher la valeur sans la dépasser. Si après le tirage d'une carte, il a dépassé 21, il perd sa mise et le croupier passe au joueur suivant. S'il décide de s'arrêter, en disant « Je reste », le croupier passe également au joueur suivant.
+
+Le croupier répète cette opération jusqu'à ce que tous les joueurs soient servis.
+
+Ensuite, il joue pour lui selon une règle simple et codifiée « la banque tire à 16, reste à 17 ».Ainsi, le croupier tire des cartes jusqu'à atteindre un nombre compris entre 17 (inclus) et 21 que l'on appelle un point. S'il fait plus de 21, tous les joueurs restants gagnent mais s'il fait son point, seuls ceux ayant un point supérieur au sien (sans avoir sauté) gagnent.
+Dans cette situation, le joueur remporte l'équivalent de sa mise. En cas d'égalité le joueur garde sa mise mais n'empoche rien en plus.
+À noter que le blackjack (une bûche et un as en deux cartes) est plus fort que 21 fait en ayant tiré plus de deux cartes. Si un joueur fait blackjack et que le banquier fait 21 en 3 cartes ou plus, le joueur fait blackjack et remporte un fois et demi de sa mise. Le banquier lui gagne contre tous les joueurs ayant 20 ou moins. Réciproquement si la banque a un as et une bûche, elle gagne contre tout joueur ayant 21 en ayant tiré plus de deux cartes. Dans ce cas, si un joueur fait également blackjack, il peut récupérer sa mise mais n'est pas payé, le jeu étant à égalité. Un joueur ayant fait blackjack (sauf blackjack à la banque auquel cas il y a égalité) remporte une fois et demi sa mise.
+
+Ces règles simples ne sont contrariées que par quatre cas particuliers :
+
+    - L'assurance : Si la première carte du croupier est un As, un joueur a la possibilité de s'assurer contre son Blackjack. Pour cela, le joueur paye la moitié de sa mise initiale. Si le croupier fait Blackjack, le joueur perd sa mise mais se voit payer l'assurance en double (donc bénéfice 0, perte 0). Si le croupier ne fait pas Blackjack, deux situations sont possibles : Premièrement, le joueur gagne ; il perd son assurance mais empoche l'équivalent de sa mise initiale (bénéfice net 1/2 fois la mise initiale). Deuxièmement, le joueur perd ; il perd alors l'assurance ainsi que sa mise (perte 1,5 fois la mise initiale). Il peut bien sûr Tirer/Doubler/Séparer après avoir pris l'assurance.
+
+    - Le split / Séparer : Lorsqu'un joueur obtient deux cartes de même valeur, il lui est possible de séparer ces deux cartes afin de jouer avec deux jeux. Pour cela, il doit ajouter la même mise que celle qu'il a jouée au départ. Une fois les jeux séparés, le joueur joue chaque main de la même façon qu'une main simple. S'il gagne sur les deux jeux, il aura fait d'une pierre deux coups (deux gains en un coup). Si le joueur perd sur un jeu, il ne gagne pas mais ne perd rien. Enfin, s'il perd sur les deux jeux, il aura perdu deux fois en un coup. Si à la suite d'une séparation, le joueur obtient une troisième carte de même valeur (sur le premier ou deuxième tableau) il peut à nouveau les séparer et ainsi jouer sur 3 tableaux. En France, cette règle est cependant au bon vouloir des casinos (certains autorisent deux jeux maximum, d'autres trois jeux maximum).
+    Une règle particulière concerne la séparation de deux as : en séparant deux as, le joueur ne peut plus recevoir qu'une carte pour chacun des tableaux et ne pourra pas spliter à nouveau s'il reçoit un troisième as.
+    En outre Le blackjack n'est pas possible en ayant splité : un joueur qui split deux as et reçoit deux bûches aura deux 21, mais pas deux blackjack, celui-ci devant être réalisé dès les deux premières cartes. Il s'ensuit pour l'exemple que le joueur ayant séparé deux as et recevant deux bûches perd tout contre un as et une figure à la banque.
+
+    - Doubler : Après avoir reçu deux cartes, le joueur peut choisir de doubler sa mise à la seule condition de ne recevoir qu'une carte après cela (le joueur est donc obligé de tirer la carte permettant de doubler). Exemple après la donne, j'ai 11 (8 et 3). Le croupier a une carte faible, 6 par exemple. Je choisis alors de doubler ma mise. L'espoir est de recevoir une bûche pour obtenir le point 21 alors que le croupier a peu de chances de faire de même. Il est tout à fait possible de doubler après avoir séparé.
+    En France, jusqu'en 2007, il n'était possible de doubler que si le score des deux premières cartes était 9, 10 ou 11. Cette règle a été abolie, et il est désormais possible de doubler avec n'importe quel score au blackjack joué dans les casinos français.
+    Au Blackjack américain, le joueur double face cachée (doubling down), c'est-à-dire que la carte qu'il reçoit après avoir doublé lui est distribuée face cachée. Il ne la voit qu'une fois le jeu du croupier terminé.
+
+    - Abandonner / Surrender : Une règle qui n'est pas universellement admise, mais néanmoins autorisé par la législation française et appliquée par certains casinos. Après avoir reçu ses deux premières cartes et constatant une carte dangereuse à la banque, un joueur peut décider d'abandonner immédiatement. Il perd simplement la moitié de sa mise. Attention, l'utilisation de l'abandon dans la plupart des casinos le pratiquant se fait directement après la distribution des cartes ; à partir du moment ou le croupier annonce le résultat du premier joueur, il ne sera plus possible d'abandonner, le joueur est donc contraint de jouer.
+
+BONNE CHANCE !
