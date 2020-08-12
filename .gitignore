@@ -169,4 +169,4 @@ mongodb.conf
 *.sln
 
 # Personal Data
-/config/keys.js
+./config/keys.js
