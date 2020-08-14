@@ -2,9 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
+
 var cardsSchema = require('./Models/cards');
 const user = require("./Routes/Api/user");
 const createTable = require("./Routes/Api/createTable");
+const cardEvent = require("./Routes/Api/deck");
 
 // Bodyparser middleware
 app.use(
@@ -24,7 +26,8 @@ mongoose.connect( db, { useNewUrlParser: true, useUnifiedTopology: true } )
 
 app.use("/user", user);
 app.use("/table", createTable);
-// app.use("/cards", user);
+app.use("/card", cardEvent)
+
 
 const port = process.env.PORT || 5000;
 

@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Table = require("../Models/table.js");
-const table = require("../Models/table.js");
 
 exports.createTable = async(req, res, next) => {
 
@@ -26,7 +25,7 @@ exports.createTable = async(req, res, next) => {
 
         message: "Chatroom " + name + " Created 🤴🏾"
     });
-    res.json({ message: "Game Table: " + name + " Created 🤴🏾" })
+    res.json({ message: "Game Table: " + name + " Created 🤴🏾" });
 
 }
 

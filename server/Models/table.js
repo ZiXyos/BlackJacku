@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const tableSchema = new Schema({
 
-
     name: {
         type: String,
         required: true

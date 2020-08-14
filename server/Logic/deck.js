@@ -1,4 +1,3 @@
-
 if (typeof Array.isArray === "undefined") {
 
     Array.isArray = function(obj) {

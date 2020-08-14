@@ -1,22 +1,36 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+
+const cardsSchema = new Schema({
+
+    value: {
+        type: Number,
+        required: true
+    },
+    nbr: {
+        type: Number,
+        required: true
+    },
+    sign: {
+        type: String,
+        required: true
+    },
+    colors: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String
+    },
+    id: {
+        type: String,
+    }
+});
+
+module.exports = Card = mongoose.model("card", cardsSchema);
+
 function card(value, sign, colors) {
-    const cardsSchema = new Schema({
-      value: {
-          type: Number,
-          required: true
-      },
-      sign: {
-          type: String,
-          required: true
-      },
-      colors: {
-          type: String,
-          required: true
-      },
-    });
-}
   value = 2;
   var signe = 1;
   var couleur = 1;
@@ -120,3 +134,4 @@ function card(value, sign, colors) {
               console.log(card);
             //   return(card(value, sign, colors));
             }
+        }
