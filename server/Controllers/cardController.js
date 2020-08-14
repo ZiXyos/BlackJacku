@@ -31,7 +31,7 @@ exports.setCard = async(req, res, next) => {
             values = 10;
         }
 
-        console.log({
+       /*  console.log({
 
             card: { id: "0" + j,
                     signe: card_tab[t],
@@ -40,8 +40,8 @@ exports.setCard = async(req, res, next) => {
                     name: card_tab[t] + "_" + j,
                     id: "0"+ j + t + "_" + values
             },
-        });
-        /*card.create({
+        });*/
+        card.create({
 
             value: values,
             nbr: j,
@@ -49,7 +49,8 @@ exports.setCard = async(req, res, next) => {
             colors: "colors run",
             name: card_tab[t] + "_" + j,
             id: "0" + j + t + "_" + values
-        });*/
+        });
+        res.json(card)
     }
 
 }
