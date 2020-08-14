@@ -11,7 +11,7 @@ module.exports = function validateLoginInput(data) {
     if (Validator.isEmpty(data.email)) {
 
         errors.email = "EUH YA PAS DEMAIL LA"
-    } else if (Validator.isEmail(data.email)) {
+    } else if (!Validator.isEmail(data.email)) {
 
         errors.email = "Bah nan ducoup tu t'es trompé bg";
     }

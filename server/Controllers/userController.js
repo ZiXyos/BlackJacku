@@ -49,7 +49,7 @@ exports.login = async (req, res, next) => {
 
     Users.findOne({ email }).then( user => {
 
-        if(!user) res.status(400).json({ emaiNotFound: "Email Not Found" });
+        if(!user) res.status(404).json({ emaiNotFound: "Email Not Found" });
 
             bcrypt.compare(password, user.password).then( isMatch => {
 
@@ -61,7 +61,7 @@ exports.login = async (req, res, next) => {
                         name: user.name
                     };
 
-                    jwt.sign(payload, keys.secretOrKey, (err, token) => {
+                    jwt.sign(payload, keys.secretOrKey, { expiresIn: 31556926 } ,(err, token) => {
 
                         res.json({
 
