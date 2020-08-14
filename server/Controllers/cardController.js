@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const card = require("../Models/cards");
+const Cards = require("../Models/cards");
 
 const cardEvent = require("../Logic/deck");
 
@@ -13,6 +13,17 @@ exports.setCard = async(req, res, next) => {
     var id;
 
     var values = 0;
+    const arr = new Array;
+
+    const newCard = new Card({
+
+        value: "",
+        nbr: "",
+        sign: "",
+        colors: "",
+        name: "",
+        id:"",
+    });
 
     for (var i = 0; i <= 51 ;i++ ) {
 
@@ -31,27 +42,17 @@ exports.setCard = async(req, res, next) => {
             values = 10;
         }
 
-       /*  console.log({
+        newCard.value = values;
+        newCard.nbr = j;
+        newCard.sign = card_tab[t];
+        newCard.colors = "colors run";
+        newCard.name = card_tab[t] + "_" + j;
+        newCard.id = "0" + j + t + "_" + values;
 
-            card: { id: "0" + j,
-                    signe: card_tab[t],
-                    nbr: j,
-                    value: values,
-                    name: card_tab[t] + "_" + j,
-                    id: "0"+ j + t + "_" + values
-            },
-        });*/
-        card.create({
-
-            value: values,
-            nbr: j,
-            sign: card_tab[t],
-            colors: "colors run",
-            name: card_tab[t] + "_" + j,
-            id: "0" + j + t + "_" + values
-        });
-        res.json(card)
     }
+    arr.push(newCard)
+
+    console.log(arr);
 
 }
 
