@@ -23,6 +23,8 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "callback": "0.0.1",
+    "fs": "0.0.1-security",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.4",
