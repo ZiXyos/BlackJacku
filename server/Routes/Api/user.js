@@ -6,5 +6,6 @@ const userController = require("../../Controllers/userController");
 
 router.post("/login", catchErrors(userController.login));
 router.post("/register", catchErrors(userController.register));
+router.post("/stats", catchErrors(userController.stats));
 
 module.exports = router;

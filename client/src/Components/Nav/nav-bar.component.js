@@ -6,6 +6,8 @@ import {
     InputGroupText, FormInput, Collapse, Col
   } from "shards-react";
 
+  import navLogo from "../../Assets/Jackpot.svg"
+  import "../../Style/nav.css"
 
 export default class NavMenu_ extends React.Component {
 
@@ -50,22 +52,18 @@ export default class NavMenu_ extends React.Component {
 
         return(
 
-            <Navbar type="dark" theme="dark" expand="md" sticky="true" fixed="true">
+            <Navbar expand="md" sticky="true" fixed="true">
 
-            <NavbarBrand href="#">♦️♣️ BlackJacku ♠️♥️</NavbarBrand>
+            <NavbarBrand href="#">
+                <div className="img-pos">
+                    <img className="nav-bar-logo"src={navLogo}/>
+                </div>
+            </NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar}/>
 
             <Collapse open={this.state.collapseOpen} navbar>
 
                 <Nav navbar>
-
-                    <NavItem>
-                        <NavLink active href="#"> Active</NavLink>
-                    </NavItem>
-
-                    <NavItem>
-                        <NavLink active href="#"> Active </NavLink>
-                    </NavItem>
                 </Nav>
 
             </Collapse>
