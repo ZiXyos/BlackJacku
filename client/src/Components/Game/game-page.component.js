@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import GameTable from "./game-table.component"
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
-export default class GamePage extends React.Component {
+class GamePage extends React.Component {
 
     render() {
 
@@ -15,3 +15,5 @@ export default class GamePage extends React.Component {
         );
     }
 }
+
+export default GamePage;

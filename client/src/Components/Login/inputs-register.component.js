@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Form, FormInput, FormGroup } from "shards-react";
 
 
-export default function FormRegister() {
+function FormRegister() {
 
     return(
 
@@ -28,4 +28,7 @@ export default function FormRegister() {
             </FormGroup>
         </Form>
     );
- }
+}
+
+
+export default FormRegister;

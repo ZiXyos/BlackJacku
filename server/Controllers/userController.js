@@ -63,6 +63,7 @@ exports.login = async (req, res, next) => {
 
                     jwt.sign(payload, keys.secretOrKey, { expiresIn: 31556926 } ,(err, token) => {
 
+                        console.log(token);
                         res.json({
 
                             success: true,

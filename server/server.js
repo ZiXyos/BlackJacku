@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
+const cors = require("cors");
 
 var cardsSchema = require('./Models/cards');
 const user = require("./Routes/Api/user");
@@ -15,6 +16,7 @@ app.use(
     })
   );
 app.use(bodyParser.json());
+app.use(cors());
 
 // DB Config
 const db = require("./Config/keys").mongoURI;
@@ -23,6 +25,8 @@ const db = require("./Config/keys").mongoURI;
 mongoose.connect( db, { useNewUrlParser: true, useUnifiedTopology: true } )
 .then(() => console.log("MongoDB successfully connected 🧉"))
 .catch(err => console.log(err));
+
+
 
 app.use("/user", user);
 app.use("/table", createTable);

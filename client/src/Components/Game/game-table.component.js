@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class GameTable extends React.Component {
+class GameTable extends React.Component {
 
     render() {
 
@@ -9,4 +9,6 @@ export default class GameTable extends React.Component {
 
         );
     }
-}
+};
+
+export default GameTable;

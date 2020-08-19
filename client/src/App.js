@@ -16,6 +16,7 @@ class App extends Component {
         return(
             <div className="main">
                 <Router>
+                    <Route path="/"/>
                     <Route path="/connexion" exact component={ Cardconnection } />
                     <Route path="/Game" exact component={ GamePage } />
                 </Router>

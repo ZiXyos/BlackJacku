@@ -9,7 +9,7 @@ import {
   import navLogo from "../../Assets/Jackpot.svg"
   import "../../Style/nav.css"
 
-export default class NavMenu_ extends React.Component {
+class NavMenu_ extends React.Component {
 
     constructor(props) {
 
@@ -70,4 +70,6 @@ export default class NavMenu_ extends React.Component {
             </Navbar>
         )
     }
-}
+};
+
+export default NavMenu_;
