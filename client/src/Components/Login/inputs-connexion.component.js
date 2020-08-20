@@ -45,16 +45,16 @@ class FormLogin extends React.Component {
             <Form>
                 <FormGroup>
                     <label htmlFor="#email">email</label>
-                    <FormInput id="#email" placeholder="email" ref={this.emailRef} />
+                    <input type="email" id="#email" placeholder="Email" ref={this.emailRef} ></input>
                 </FormGroup>
 
                 <FormGroup>
                     <label htmlFor="#password">Password</label>
-                    <FormInput type="password" id="#password" placeholder="Password" ref={this.passwordRef} />
+                    <input type="password" id="#password" placeholder="Password" ref={this.passwordRef}></input>
                 </FormGroup>
 
                 <div>
-                    <Button onClick={this.loginUser}>Click Me!</Button>
+                    <Button onClick={this.loginUser(this.emailRef, this.passwordRef)}>Click Me!</Button>
                     <Modal open={open} toggle={this.toggle}>
                         <ModalHeader> Login Success 💯</ModalHeader>
                         <ModalBody>👋 Hello there! Welcome To Da Jungle</ModalBody>
